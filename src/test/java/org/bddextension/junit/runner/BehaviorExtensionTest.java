@@ -8,7 +8,6 @@ package org.bddextension.junit.runner;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -35,12 +34,6 @@ public class BehaviorExtensionTest {
         assertNull(day);
     }
 
-    @After
-    public void cleanUpFields() {
-        employee = null;
-        day = null;
-    }
-
     @Context("new employee")
     public void givenNewEmployee() {
         employee = NEW_GUY;
@@ -53,16 +46,15 @@ public class BehaviorExtensionTest {
 
     @Test
     @Given("new employee")
-    public void testRunChild() {
+    public void testNewEmployee() {
         assertEquals(employee, NEW_GUY);
         assertNull(day);
     }
 
     @Test
     @Given({"new employee", "today is friday"})
-    public void testNewEmpoyeeOnFriday() {
+    public void testNewEmployeeOnFriday() {
         assertEquals(employee, NEW_GUY);
         assertEquals(day, FRIDAY);
     }
-
 }
