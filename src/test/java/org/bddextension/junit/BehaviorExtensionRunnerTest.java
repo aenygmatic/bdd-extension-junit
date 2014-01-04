@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.bddextension.junit.runner;
+package org.bddextension.junit;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -22,17 +22,15 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import org.bddextension.junit.Context;
-import org.bddextension.junit.Given;
-
 /**
+ * Test for {@link BehaviorExtensionRunner BehaviorExtensionRunner.class}.
  *
  * @author Balazs Berkes
  */
-@RunWith(BehaviorExtension.class)
-public class BehaviorExtensionTest {
+@RunWith(BehaviorExtensionRunner.class)
+public class BehaviorExtensionRunnerTest {
 
-    public static final String NEW_GUY = "new guy";
+    private static final String NEW_GUY = "new guy";
     private static final String FRIDAY = "friday";
 
     private String employee;
