@@ -18,12 +18,12 @@ package org.bddextension.junit;
 import org.junit.Rule;
 
 /**
- * Base test for JUnit test wants to use {@link Given @Given} and {@link Context @Context} annotations.
- * This class uses {@link BehavoirExtensionRule}.
+ * Base test for JUnit test wants to use {@link Given @Given} and {@link Context @Context} annotations. This class uses
+ * {@link BehavoirExtensionRule}.
  * <p>
  * @author Balazs Berkes
  */
-abstract class BehaviorExtensionAwareTest {
+abstract public class BehaviorExtensionAwareTest {
 
     @Rule
     public final BehavoirExtensionRule behavoirExtensionRule = new BehavoirExtensionRule();

@@ -15,11 +15,6 @@
  */
 package org.bddextension.junit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
-import org.junit.Before;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 
 /**
@@ -28,41 +23,6 @@ import org.junit.runner.RunWith;
  * @author Balazs Berkes
  */
 @RunWith(BehaviorExtensionRunner.class)
-public class BehaviorExtensionRunnerTest {
+public class BehaviorExtensionRunnerTest extends BehaviorExtensionTest {
 
-    private static final String NEW_GUY = "new guy";
-    private static final String FRIDAY = "friday";
-
-    private String employee;
-    private String day;
-
-    @Before
-    public void assertBeforeRunsBeforeContexts() {
-        assertNull(employee);
-        assertNull(day);
-    }
-
-    @Context("new employee")
-    public void givenNewEmployee() {
-        employee = NEW_GUY;
-    }
-
-    @Context("today is friday")
-    public void givenFriday() {
-        day = FRIDAY;
-    }
-
-    @Test
-    @Given("new employee")
-    public void testNewEmployee() {
-        assertEquals(employee, NEW_GUY);
-        assertNull(day);
-    }
-
-    @Test
-    @Given({"new employee", "today is friday"})
-    public void testNewEmployeeOnFriday() {
-        assertEquals(employee, NEW_GUY);
-        assertEquals(day, FRIDAY);
-    }
 }

@@ -15,49 +15,16 @@
  */
 package org.bddextension.junit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
-
 import org.junit.Rule;
-import org.junit.Test;
 
 /**
  * Test for {@link BehavoirExtensionRule}.
  *
  * @author Balazs Berkes
  */
-public class BehavoirExtensionRuleTest {
+public class BehavoirExtensionRuleTest extends BehaviorExtensionTest {
 
     @Rule
     public final BehavoirExtensionRule behavoirExtensionRule = new BehavoirExtensionRule();
 
-    private static final String NEW_GUY = "new guy";
-    private static final String FRIDAY = "friday";
-
-    private String employee;
-    private String day;
-
-    @Context("new employee")
-    public void givenNewEmployee() {
-        employee = NEW_GUY;
-    }
-
-    @Context("today is friday")
-    public void givenFriday() {
-        day = FRIDAY;
-    }
-
-    @Test
-    @Given("new employee")
-    public void testNewEmployee() {
-        assertEquals(employee, NEW_GUY);
-        assertNull(day);
-    }
-
-    @Test
-    @Given({"new employee", "today is friday"})
-    public void testNewEmployeeOnFriday() {
-        assertEquals(employee, NEW_GUY);
-        assertEquals(day, FRIDAY);
-    }
 }
