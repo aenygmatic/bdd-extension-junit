@@ -24,6 +24,9 @@ import org.junit.internal.runners.statements.RunBefores;
 import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.Statement;
 
+import org.bddextension.junit.annotations.Context;
+import org.bddextension.junit.annotations.Given;
+
 /**
  * Collects the methods into a {@link Statement} which belongs to the current {@code @Test} method.
  * <p>

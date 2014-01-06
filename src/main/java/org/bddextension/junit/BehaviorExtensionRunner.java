@@ -25,6 +25,9 @@ import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.Statement;
 
+import org.bddextension.junit.annotations.Context;
+import org.bddextension.junit.annotations.Given;
+
 /**
  * Extension of {@link BlockJUnit4ClassRunner} which supports {@link Given @Given} and {@link Context @Context}
  * annotations.

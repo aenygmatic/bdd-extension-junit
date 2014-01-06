@@ -20,6 +20,9 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
+import org.bddextension.junit.annotations.Context;
+import org.bddextension.junit.annotations.Given;
+
 /**
  * Test for {@link BehaviorExtensionAwareTest}.
  * <p>

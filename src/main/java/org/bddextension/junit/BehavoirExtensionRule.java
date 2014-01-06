@@ -24,6 +24,8 @@ import org.junit.rules.TestRule;
 import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.Statement;
 
+import org.bddextension.junit.annotations.Context;
+
 /**
  * JUnit {@link TestRule} which supports {@link Given @Given} and {@link Context @Context}
  * annotations.

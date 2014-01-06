@@ -23,6 +23,9 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Test;
 
+import org.bddextension.junit.annotations.Context;
+import org.bddextension.junit.annotations.Given;
+
 /**
  * Test template for {@link Context @Context} and {@link Given @Given} annotations.
  *
